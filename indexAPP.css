@@ -64,7 +64,8 @@ background: linear-gradient(to bottom, #274046, #E6DADA); /* W3C, IE 10+/ Edge, 
     height: 80%;
     box-shadow: 0px 0px 20px 0px;
     justify-content: center;
-   background-color: #ffcc33;
+    background: rgb(181,223,240);
+background: linear-gradient(0deg, rgba(181,223,240,0.9585084033613446) 0%, rgba(178,237,247,0.7120098039215687) 100%);
 
 
 }
