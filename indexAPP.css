@@ -1,0 +1,210 @@
+body {
+    color: black;
+}
+
+.icon {
+    width: 2rem;
+    height: 2rem;
+    transition: all 0.22s ease-in-out;
+
+}
+#icon-trash {
+    color: #ef4444ed;
+}  
+#icon-trash:hover {
+    color: #b91c1c;
+    cursor: pointer;
+    width: 2.2rem;
+    height: 2.2rem;
+}
+#check-icon {
+    color: #1ea80d;
+    cursor: pointer;
+
+}
+#check-icon:hover {
+    color: #31be1fd8;
+    width: 2.2rem;
+    height: 2.2rem;
+
+}
+
+#todo-icon {
+    width: 1.7rem;
+    height: 1.7rem;
+    cursor: pointer;
+}
+#todo-icon:hover {
+    color: #b91c1c;
+    width: 1.9rem;
+    height: 1.9rem;
+}
+/* MAIN */
+#main-app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    padding: 0 1rem;
+    align-items: center;
+    background: #E6DADA;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #274046, #E6DADA);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #274046, #E6DADA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+    }
+
+#main-container-app {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    /* justify-content: center;
+    height: 60%; */
+    width: 80%;
+    height: 80%;
+    box-shadow: 0px 0px 20px 0px;
+    justify-content: center;
+   background-color: #ffcc33;
+
+
+}
+
+/* TITULO MAIN */
+#main-title-app {
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+/* INPUT DEL MAIN */
+#input-button-app {
+    display: flex;
+    gap: 1rem;
+    justify-content: center; 
+    padding-bottom: 1rem;
+}
+#input-app {
+    margin: 0; 
+    border-radius: 0.5rem;
+    height: 2rem;
+    width: 70%;
+    padding: 0.5rem;
+}
+
+/* BOTON */
+
+#button-app {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 1rem;
+    padding: 0;
+    background-color: black;
+    color: white;
+}
+#button-app:hover {
+    background-color: rgba(163, 161, 161, 0.73);
+    cursor: pointer;
+    transition: all 0.22s ease-in-out;
+}
+/* LISTA  */
+
+#lista-app {
+    /* background-color: lightcoral; */
+   border-top-width: 2px;
+   border-color: black;
+   background-color: #FEFFDE;
+    margin: 0;
+    overflow: auto;
+    padding: 0;
+    list-style: none; /* eliminar puntos lista */
+    /* border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem; */
+
+
+}
+
+#item-list{
+    display: flex;
+    border-bottom-width: 2px;
+    border-color: black;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+
+}
+.done {
+    text-decoration: line-through;
+    color: grey;
+    background-color: #faf5ff;
+}
+
+#boton-lista {
+    background: transparent;
+    padding: 0;
+}
+
+#item-list-task {
+    text-align: center;
+
+}
+#item-list-botones {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+/* CONTADOR LISTA */
+
+#counter-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    text-align: center;
+
+}
+
+.spans {
+    border-radius: 0.5rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1rem;
+}
+#span-tarea {
+    background-color: #8a2be299;
+
+}
+#span-incompletas {
+    background-color: #ff0000c7;
+
+}
+
+#span-completas {
+    background-color: #1ea80dad;
+}
+
+
+
+@media (min-width: 1024px) {
+    #counter-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+    }
+    .spans {
+        width: 20%;
+        height: 4rem;
+        font-size: 1.3rem;
+        }
+    #main-container-app {
+        font-size: 1.5rem;
+    }
+}
