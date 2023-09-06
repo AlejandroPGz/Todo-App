@@ -19,88 +19,50 @@
     <nav id="nav">
         <div id="nav-container">
           <h1 id="nav-logo">TskBar</h1>
-             <svg id="nav-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <div id="direcciones" class="direcciones-desactivada">
+            <button id="nav-icon"> 
+             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-             </svg>
-         <div id="links-container">
+             </svg></button>
+             <div id="direcciones-hamburger-div" class="hide" class="direcciones-hamburger">
+                <a class="link" href="app.html">App</a>
+                <a class="link" href="index.html">Home</a>
+             </div>
+        </div>
+        <div id="links-container">
             <a class="link" href="app.html">App</a>
             <a class="link" href="index.html">Home</a>
           </div>
-        </div>
      </div>
 </nav>
 <main id="main-app">
     <div id="main-container-app">
         <h2 id="main-title-app">Tasks</h2>
                 <div id="input-button-app">
-                         <input id="input-app" type="text" placeholder="AddTask">
+                    <div id="div-input-mensaje">
+                  <form id="form-app">
+                         <input id="input-app" type="text" placeholder="AddTask" required>
+                         <p class="hide p-messsage" id="mensaje-p">No mas de 600 caracteres ni puede estar vacio</p>
+                        </div>
                          <button id="button-app"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                           </svg>
                           </button>
+                        </form>
                  </div>
         <ul id="lista-app">
-            <li id="item-list" class="done">
-                <div id="item-list-botones"> <button id="boton-lista"> <svg class="icon"  id="icon-trash" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-                  <path fill-rule="evenodd" d="M16.5 4.478v.227a48.816 48.816 0 013.878.512.75.75 0 11-.256 1.478l-.209-.035-1.005 13.07a3 3 0 01-2.991 2.77H8.084a3 3 0 01-2.991-2.77L4.087 6.66l-.209.035a.75.75 0 01-.256-1.478A48.567 48.567 0 017.5 4.705v-.227c0-1.564 1.213-2.9 2.816-2.951a52.662 52.662 0 013.369 0c1.603.051 2.815 1.387 2.815 2.951zm-6.136-1.452a51.196 51.196 0 013.273 0C14.39 3.05 15 3.684 15 4.478v.113a49.488 49.488 0 00-6 0v-.113c0-.794.609-1.428 1.364-1.452zm-.355 5.945a.75.75 0 10-1.5.058l.347 9a.75.75 0 101.499-.058l-.346-9zm5.48.058a.75.75 0 10-1.498-.058l-.347 9a.75.75 0 001.5.058l.345-9z" clip-rule="evenodd" />
-                </svg>
-                 </button>
-                  </div>
-                <div id="item-list-task"><p>Practicar Ingles</p></div>
-                <div id="item-list-botones"> <button id="boton-lista"> <svg class="icon" id="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-  <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clip-rule="evenodd" />
-</svg> </button> 
-                </div>
-            </li>
-            <li id="item-list" class="done"> <div id="item-list-botones" class="div-boton"> <button id="boton-lista">  <svg  id="icon-trash" class="icon" id="iconitem-list-botones" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-                  <path fill-rule="evenodd" d="M16.5 4.478v.227a48.816 48.816 0 013.878.512.75.75 0 11-.256 1.478l-.209-.035-1.005 13.07a3 3 0 01-2.991 2.77H8.084a3 3 0 01-2.991-2.77L4.087 6.66l-.209.035a.75.75 0 01-.256-1.478A48.567 48.567 0 017.5 4.705v-.227c0-1.564 1.213-2.9 2.816-2.951a52.662 52.662 0 013.369 0c1.603.051 2.815 1.387 2.815 2.951zm-6.136-1.452a51.196 51.196 0 013.273 0C14.39 3.05 15 3.684 15 4.478v.113a49.488 49.488 0 00-6 0v-.113c0-.794.609-1.428 1.364-1.452zm-.355 5.945a.75.75 0 10-1.5.058l.347 9a.75.75 0 101.499-.058l-.346-9zm5.48.058a.75.75 0 10-1.498-.058l-.347 9a.75.75 0 001.5.058l.345-9z" clip-rule="evenodd" />
-                </svg> </button>
-              </div>
-            <div id="item-list-task"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa enim architecto adipisci, odio nam ab doloremque incidunt placeat accusamus ducimus cumque fugiat natus ut. Ipsum laboriosam quia cumque perspiciatis exercitationem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, rem. Asperiores doloribus placeat cumque corrupti saepe mollitia recusandae sed, et optio maxime aspernatur fugit facilis provident officiis voluptates laudantium nostrum. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi mollitia ipsa quis ratione! Recusandae ratione expedita aut veritatis? Quisquam repudiandae accusantium ipsum voluptas numquam, voluptatibus quis consectetur esse suscipit. Unde.</p></div>
-            <div id="item-list-botones" class="div-boton"> <button id="boton-lista"> <svg class="icon" id="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-              <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clip-rule="evenodd" />
-            </svg> </button> 
-            </div></li>
-            <li id="item-list"><div id="item-list-botones"> <button id="boton-lista">  <svg   id="icon-trash"class="icon" id="iconitem-list-botones" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-                  <path fill-rule="evenodd" d="M16.5 4.478v.227a48.816 48.816 0 013.878.512.75.75 0 11-.256 1.478l-.209-.035-1.005 13.07a3 3 0 01-2.991 2.77H8.084a3 3 0 01-2.991-2.77L4.087 6.66l-.209.035a.75.75 0 01-.256-1.478A48.567 48.567 0 017.5 4.705v-.227c0-1.564 1.213-2.9 2.816-2.951a52.662 52.662 0 013.369 0c1.603.051 2.815 1.387 2.815 2.951zm-6.136-1.452a51.196 51.196 0 013.273 0C14.39 3.05 15 3.684 15 4.478v.113a49.488 49.488 0 00-6 0v-.113c0-.794.609-1.428 1.364-1.452zm-.355 5.945a.75.75 0 10-1.5.058l.347 9a.75.75 0 101.499-.058l-.346-9zm5.48.058a.75.75 0 10-1.498-.058l-.347 9a.75.75 0 001.5.058l.345-9z" clip-rule="evenodd" />
-                </svg> </button>
-              </div>
-            <div id="item-list-task"><p>Hacer Ejercicio</p></div>
-            <div id="item-list-botones"> <button id="boton-lista"> <svg class="icon" id="todo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z"/></svg>
-             </button> 
-            </div></li>
-            <li id="item-list"> <div id="item-list-botones"> <button id="boton-lista">  <svg  id="icon-trash" class="icon" id="iconitem-list-botones" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-              <path fill-rule="evenodd" d="M16.5 4.478v.227a48.816 48.816 0 013.878.512.75.75 0 11-.256 1.478l-.209-.035-1.005 13.07a3 3 0 01-2.991 2.77H8.084a3 3 0 01-2.991-2.77L4.087 6.66l-.209.035a.75.75 0 01-.256-1.478A48.567 48.567 0 017.5 4.705v-.227c0-1.564 1.213-2.9 2.816-2.951a52.662 52.662 0 013.369 0c1.603.051 2.815 1.387 2.815 2.951zm-6.136-1.452a51.196 51.196 0 013.273 0C14.39 3.05 15 3.684 15 4.478v.113a49.488 49.488 0 00-6 0v-.113c0-.794.609-1.428 1.364-1.452zm-.355 5.945a.75.75 0 10-1.5.058l.347 9a.75.75 0 101.499-.058l-.346-9zm5.48.058a.75.75 0 10-1.498-.058l-.347 9a.75.75 0 001.5.058l.345-9z" clip-rule="evenodd" />
-            </svg> </button>
-          </div>
-        <div id="item-list-task"><p>Practicar Matematicas</p></div>
-        <div id="item-list-botones"> <button id="boton-lista"> <svg class="icon" id="todo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z"/></svg></button> 
-        </div></li>
-        <li id="item-list"> <div id="item-list-botones"> <button id="boton-lista">  <svg  id="icon-trash" class="icon" id="iconitem-list-botones" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-          <path fill-rule="evenodd" d="M16.5 4.478v.227a48.816 48.816 0 013.878.512.75.75 0 11-.256 1.478l-.209-.035-1.005 13.07a3 3 0 01-2.991 2.77H8.084a3 3 0 01-2.991-2.77L4.087 6.66l-.209.035a.75.75 0 01-.256-1.478A48.567 48.567 0 017.5 4.705v-.227c0-1.564 1.213-2.9 2.816-2.951a52.662 52.662 0 013.369 0c1.603.051 2.815 1.387 2.815 2.951zm-6.136-1.452a51.196 51.196 0 013.273 0C14.39 3.05 15 3.684 15 4.478v.113a49.488 49.488 0 00-6 0v-.113c0-.794.609-1.428 1.364-1.452zm-.355 5.945a.75.75 0 10-1.5.058l.347 9a.75.75 0 101.499-.058l-.346-9zm5.48.058a.75.75 0 10-1.498-.058l-.347 9a.75.75 0 001.5.058l.345-9z" clip-rule="evenodd" />
-        </svg> </button>
-      </div>
-    <div id="item-list-task"><p>Practicar Matematicas</p></div>
-    <div id="item-list-botones"> <button id="boton-lista"> <svg class="icon" id="todo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z"/></svg></button> 
-    </div></li><li id="item-list"> <div id="item-list-botones"> <button id="boton-lista">  <svg  id="icon-trash" class="icon" id="iconitem-list-botones" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-      <path fill-rule="evenodd" d="M16.5 4.478v.227a48.816 48.816 0 013.878.512.75.75 0 11-.256 1.478l-.209-.035-1.005 13.07a3 3 0 01-2.991 2.77H8.084a3 3 0 01-2.991-2.77L4.087 6.66l-.209.035a.75.75 0 01-.256-1.478A48.567 48.567 0 017.5 4.705v-.227c0-1.564 1.213-2.9 2.816-2.951a52.662 52.662 0 013.369 0c1.603.051 2.815 1.387 2.815 2.951zm-6.136-1.452a51.196 51.196 0 013.273 0C14.39 3.05 15 3.684 15 4.478v.113a49.488 49.488 0 00-6 0v-.113c0-.794.609-1.428 1.364-1.452zm-.355 5.945a.75.75 0 10-1.5.058l.347 9a.75.75 0 101.499-.058l-.346-9zm5.48.058a.75.75 0 10-1.498-.058l-.347 9a.75.75 0 001.5.058l.345-9z" clip-rule="evenodd" />
-    </svg> </button>
-  </div>
-<div id="item-list-task"><p>Practicar Matematicas</p></div>
-<div id="item-list-botones"> <button id="boton-lista"> <svg class="icon" id="todo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z"/></svg></button> 
-</div></li><li id="item-list"> <div id="item-list-botones"> <button id="boton-lista">  <svg  id="icon-trash" class="icon" id="iconitem-list-botones" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-  <path fill-rule="evenodd" d="M16.5 4.478v.227a48.816 48.816 0 013.878.512.75.75 0 11-.256 1.478l-.209-.035-1.005 13.07a3 3 0 01-2.991 2.77H8.084a3 3 0 01-2.991-2.77L4.087 6.66l-.209.035a.75.75 0 01-.256-1.478A48.567 48.567 0 017.5 4.705v-.227c0-1.564 1.213-2.9 2.816-2.951a52.662 52.662 0 013.369 0c1.603.051 2.815 1.387 2.815 2.951zm-6.136-1.452a51.196 51.196 0 013.273 0C14.39 3.05 15 3.684 15 4.478v.113a49.488 49.488 0 00-6 0v-.113c0-.794.609-1.428 1.364-1.452zm-.355 5.945a.75.75 0 10-1.5.058l.347 9a.75.75 0 101.499-.058l-.346-9zm5.48.058a.75.75 0 10-1.498-.058l-.347 9a.75.75 0 001.5.058l.345-9z" clip-rule="evenodd" />
-</svg> </button>
-</div>
-<div id="item-list-task"><p>Practicar Matematicas</p></div>
-<div id="item-list-botones"> <button id="boton-lista"> <svg class="icon" id="todo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z"/></svg></button> 
-</div></li>
         </ul>
 
         <div id="counter-list">
-            <span class="spans" id="span-tarea">Tasks: 7</span>
-            <span class="spans" id="span-incompletas">Incompletes: 5</span>
-            <span class="spans" id="span-completas">Complete: 2</span>
+            <!-- boton tareas -->
+            <buttom class="spans" id="span-tarea"></buttom>
+         
+            <!-- boton incom -->
+            <buttom class="spans" id="span-incompletas"></buttom>
+           
+            <!-- boton completas  -->
+            <buttom class="spans" id="span-completas"></buttom>
+        
 
         </div>
 
@@ -122,5 +84,6 @@
     </div>
     </div>
 </footer>
+<script src="index.js"></script>
 </body>
 </html>

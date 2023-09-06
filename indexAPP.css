@@ -9,10 +9,10 @@ body {
 
 }
 #icon-trash {
-    color: #ef4444ed;
+    color: #e20000;
 }  
 #icon-trash:hover {
-    color: #b91c1c;
+    color: #ff0000;
     cursor: pointer;
     width: 2.2rem;
     height: 2.2rem;
@@ -39,13 +39,13 @@ body {
     width: 1.9rem;
     height: 1.9rem;
 }
+
 /* MAIN */
 #main-app {
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 100vh;
-    padding: 0 1rem;
     align-items: center;
     background: #E6DADA;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to bottom, #274046, #E6DADA);  /* Chrome 10-25, Safari 5.1-6 */
@@ -57,16 +57,14 @@ background: linear-gradient(to bottom, #274046, #E6DADA); /* W3C, IE 10+/ Edge, 
 #main-container-app {
     display: flex;
     flex-direction: column;
-    border-radius: 0.5rem;
+    border-radius: 1rem;
     /* justify-content: center;
     height: 60%; */
     width: 80%;
-    height: 80%;
+    max-height: 70%;
     box-shadow: 0px 0px 20px 0px;
     justify-content: center;
-    background: rgb(181,223,240);
-background: linear-gradient(0deg, rgba(181,223,240,0.9585084033613446) 0%, rgba(178,237,247,0.7120098039215687) 100%);
-
+    background: rgb(0 0 0);
 
 }
 
@@ -75,23 +73,57 @@ background: linear-gradient(0deg, rgba(181,223,240,0.9585084033613446) 0%, rgba(
     text-align: center;
     padding-top: 1rem;
     padding-bottom: 1rem;
+    color: #ffff;
 }
 
 /* INPUT DEL MAIN */
 #input-button-app {
     display: flex;
-    gap: 1rem;
     justify-content: center; 
-    padding-bottom: 1rem;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
 }
+
+#div-input-mensaje {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    padding-top: 1rem;
+}
+
+#form-app {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1rem;
+    gap: 1rem;
+    width: 100%;
+}
+
 #input-app {
     margin: 0; 
     border-radius: 0.5rem;
     height: 2rem;
-    width: 70%;
+    width: 100%;
     padding: 0.5rem;
+    background: #dedede;
 }
 
+.p-messsage {
+    background-color: white;
+    border: 2px solid #ff0000;
+    border-radius: 1rem;
+    height: 1.5srem;
+    width: 100%;
+    text-align: center;
+}
+
+.input-error {
+    border: 4px solid #ff0000;
+}
 /* BOTON */
 
 #button-app {
@@ -110,24 +142,21 @@ background: linear-gradient(0deg, rgba(181,223,240,0.9585084033613446) 0%, rgba(
 /* LISTA  */
 
 #lista-app {
-    /* background-color: lightcoral; */
    border-top-width: 2px;
    border-color: black;
-   background-color: #FEFFDE;
+   background-color: #767676;
     margin: 0;
     overflow: auto;
     padding: 0;
-    list-style: none; /* eliminar puntos lista */
-    /* border-bottom-left-radius: 0.5rem;
-    border-bottom-right-radius: 0.5rem; */
-
+    list-style: none;
+    word-break: break-all;
 
 }
 
-#item-list{
+.item-list{
     display: flex;
     border-bottom-width: 2px;
-    border-color: black;
+    border-color: #1a1d31;
     justify-content: space-between;
     align-items: center;
     padding: 0.5rem;
@@ -135,17 +164,19 @@ background: linear-gradient(0deg, rgba(181,223,240,0.9585084033613446) 0%, rgba(
 }
 .done {
     text-decoration: line-through;
-    color: grey;
-    background-color: #faf5ff;
+    text-decoration-thickness: 4.6px;
+    color: #000000;
+    background-color: #44544a;
 }
 
-#boton-lista {
+.boton-lista {
     background: transparent;
     padding: 0;
 }
 
 #item-list-task {
     text-align: center;
+    color: #ffff;
 
 }
 #item-list-botones {
@@ -169,28 +200,42 @@ background: linear-gradient(0deg, rgba(181,223,240,0.9585084033613446) 0%, rgba(
 }
 
 .spans {
-    border-radius: 0.5rem;
+    border-radius: 1rem;
     height: 2.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-weight: 700;
     font-size: 1rem;
+    color: #ffff;
 }
+
+.spans:hover {
+    cursor: pointer;
+}
+
 #span-tarea {
-    background-color: #8a2be299;
+    background-color: #0014ab99;
 
 }
-#span-incompletas {
-    background-color: #ff0000c7;
+#span-tarea:hover {
+    background-color: #001dfb99;
+}
 
+#span-incompletas {
+    background-color: #b00000c7;
+
+}
+#span-incompletas:hover {
+    background-color: #ce0000c7;
 }
 
 #span-completas {
-    background-color: #1ea80dad;
+    background-color: #0d8300ad;
+
 }
-
-
+#span-completas:hover {
+    background-color: #11a800ad;
+}
 
 @media (min-width: 1024px) {
     #counter-list {
@@ -204,8 +249,82 @@ background: linear-gradient(0deg, rgba(181,223,240,0.9585084033613446) 0%, rgba(
         width: 20%;
         height: 4rem;
         font-size: 1.3rem;
+        border-radius: 2rem;
         }
     #main-container-app {
         font-size: 1.5rem;
+        border-radius: 2rem;
+    }
+    #input-button-app {
+        padding: 0.5rem;
     }
 }
+
+@media (min-width: 2560px) {
+   #main-container-app {
+    height: 100rem;
+   }
+   #main-title-app {
+    font-size: 7rem;
+   }
+   #input-button-app {
+    height: 9rem;
+   }
+   #input-app {
+    height: 6rem;
+    font-size: 3.5rem;
+   }
+   #button-app {
+    height: 5rem;
+    width: 5rem;
+   }
+   #lista-app {
+    height: 60rem;
+   }
+   .item-list {
+    height: 10rem;
+   }
+   #delete-button {
+    height: 5rem;
+    width: 5rem;
+   }
+   .icon {
+    height: 5rem;
+    width: 5rem;
+   }
+   #todo-icon {
+    height: 5rem;
+    width: 5rem;
+   }
+   #item-list-task {
+    font-size: 4rem;
+   }
+   .spans {
+    font-size: 4rem;
+    height: 7rem;
+    width: 30%;
+
+   }
+}
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  ::-webkit-scrollbar-button {
+    border-radius: 0.5rem;
+  }

@@ -12,18 +12,24 @@
 </head>
 <body>
     <nav id="nav">
-            <div id="nav-container">
-              <h1 id="nav-logo">TskManager</h1>
-                 <svg id="nav-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                 </svg>
-             <div id="links-container">
+        <div id="nav-container">
+          <h1 id="nav-logo">TskBar</h1>
+          <div id="direcciones" class="direcciones-desactivada">
+            <button id="nav-icon"> 
+             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+             </svg></button>
+             <div id="direcciones-hamburger-div" class="hide" class="direcciones-hamburger">
                 <a class="link" href="app.html">App</a>
                 <a class="link" href="index.html">Home</a>
-              </div>
-            </div>
-         </div>
-    </nav>
+             </div>
+        </div>
+        <div id="links-container">
+            <a class="link" href="app.html">App</a>
+            <a class="link" href="index.html">Home</a>
+          </div>
+     </div>
+</nav>
     <main id="main">
         <h2 id="main-title">To-do List</h2>
         <div id="description-container">
@@ -45,9 +51,9 @@
             <a class="link-footer" id="footer-content">Community</a>
             <a class="link-footer" id="footer-content">Support</a>
         </div>
-        </div>
-        
+        </div>   
     </footer>
+    <script src="indexh.js"></script>
 </body>
 </html>
 <!-- “While we are postponing, life speeds by” -->
